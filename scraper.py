@@ -5,7 +5,7 @@
 # import lxml.html
 import mechanize
 
-request = mechanize.Request("http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10")
+request = mechanize.Request('http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10')
 response = mechanize.urlopen(request)
 
 #
