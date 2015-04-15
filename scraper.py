@@ -5,10 +5,9 @@
 # import lxml.html
 import mechanize
 
-br = mechanize.Browser()
-br.open("http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10")
-for link in br.links():
-  print link
+request = mechanize.Request("http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10")
+response = mechanize.urlopen(request)
+
 #
 # # Read in a page
 # html = scraperwiki.scrape("http://www.example.com/")
@@ -27,4 +26,3 @@ for link in br.links():
 # on Morph for Python (https://github.com/openaustralia/morph-docker-python/blob/master/pip_requirements.txt) and all that matters
 # is that your final data is written to an Sqlite database called data.sqlite in the current working directory which
 # has at least a table called data.
-print 'Hello World'
